@@ -1,7 +1,8 @@
 # struts
 お試し用
 
-> struts についての説明ガイドは同じディレクトリのpdf参照  
+> struts についての説明(概要)ガイドは同じディレクトリのpdf参照  
+[http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_1.html](http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_1.html)
 
 # Oracle 
 
