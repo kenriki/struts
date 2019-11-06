@@ -18,6 +18,9 @@
 
 [https://qiita.com/Kazunori-Kimura/items/a15a011485ac92074d6f](https://qiita.com/Kazunori-Kimura/items/a15a011485ac92074d6f)
 
+# jspとサーブレット　値受け渡し　参考リンク
+[http://satoukibi.hatenablog.com/entry/2017/02/27/jsp_%E3%81%A8_%E3%82%B5%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88_%E3%81%A7%E5%80%A4%E3%81%AE%E5%8F%97%E3%81%91%E6%B8%A1%E3%81%97%E3%82%92%E3%81%99%E3%82%8B%E3%80%82](http://satoukibi.hatenablog.com/entry/2017/02/27/jsp_%E3%81%A8_%E3%82%B5%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88_%E3%81%A7%E5%80%A4%E3%81%AE%E5%8F%97%E3%81%91%E6%B8%A1%E3%81%97%E3%82%92%E3%81%99%E3%82%8B%E3%80%82)
+
 # WebSphere Commerce Struts framework
 [https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm)
 
