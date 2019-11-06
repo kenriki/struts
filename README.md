@@ -18,3 +18,5 @@
 
 # WebSphere Commerce Struts framework
 [https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm)
+
+[https://www.ibm.com/developerworks/jp/websphere/library/was/toranomaki/1.html](https://www.ibm.com/developerworks/jp/websphere/library/was/toranomaki/1.html)
