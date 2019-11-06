@@ -16,7 +16,10 @@
 # サーブレットについておさらい
 [https://codezine.jp/article/detail/1481](https://codezine.jp/article/detail/1481)
 
+[https://qiita.com/Kazunori-Kimura/items/a15a011485ac92074d6f](https://qiita.com/Kazunori-Kimura/items/a15a011485ac92074d6f)
+
 # WebSphere Commerce Struts framework
 [https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm)
 
 [https://www.ibm.com/developerworks/jp/websphere/library/was/toranomaki/1.html](https://www.ibm.com/developerworks/jp/websphere/library/was/toranomaki/1.html)
+
