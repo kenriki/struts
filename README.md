@@ -1,4 +1,4 @@
-# struts
+# Struts
 
 > struts についての説明(概要)ガイドは同じディレクトリのpdf参照  
 [http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_1.html](http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_1.html)
@@ -15,3 +15,5 @@
 
 # サーブレットについておさらい
 [https://codezine.jp/article/detail/1481](https://codezine.jp/article/detail/1481)
+
+[https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/com.ibm.commerce.developer.doc/concepts/csdstrutskeycompons.htm)
