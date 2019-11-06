@@ -1,5 +1,4 @@
 # struts
-お試し用
 
 > struts についての説明(概要)ガイドは同じディレクトリのpdf参照  
 [http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_1.html](http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_1.html)
@@ -13,3 +12,6 @@
 
 ## チュートリアル学習環境の整備  
 [http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_3.1.html](http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_3.1.html)
+
+# サーブレットについておさらい
+[https://codezine.jp/article/detail/1481](https://codezine.jp/article/detail/1481)
