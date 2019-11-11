@@ -27,8 +27,8 @@ public class TestP extends HttpServlet {
 		// 呼び出し先Jspに渡すデータセット
 		request.setAttribute("fromServlet", jsp + " + サーブレットで追加");
 
-		// result.jsp にページ遷移
-		RequestDispatcher dispatch = request.getRequestDispatcher("result.jsp");
+		// resultP.jsp にページ遷移
+		RequestDispatcher dispatch = request.getRequestDispatcher("resultP.jsp");
 		dispatch.forward(request, response);
 	}
 }
