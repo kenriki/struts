@@ -14,6 +14,19 @@
 [http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_3.1.html](http://terasoluna.osdn.jp/tutorial/server-web/Document/WebTutorial_3.1.html)
 
 # サーブレットについておさらい
+
+> ◆ サーブレットとは、Webサーバ側で動作するJavaアプレットで、Java版のCGIみたいなものです。
+　サーブレットは、Webサーバの一部として動作するため、セッション管理を行うこともできます。 また、常駐している分、実行速度も速くなります。
+　サーブレットを実行するためには、Java Server APIに対応したWebサーバが必要です。 ApacheなどのWebサーバの場合、Java Server APIに対応するためのプログラムと連携することで、対応することができます。  
+
+> ◆ Servlet APIは、ApacheなどのWebサーバでサーブレットを動作させるために必要なモジュールです。 Servlet APIは、Javaエクステンションで、javaxの標準パッケージとして提供されます。 しかし、サーブレットは、クライアントでは使わないため、すべてのプラットフォームでサポートされるわけではありません。
+　Servlet APIには、ApacheのJakartaプロジェクトのTomcatなどがあります。 Tomcatは、Sun Microsystemsから、ソースライセンスの提供を受けてリリースされています。
+　この他にも、Sun Microsystemsの提供する、JSDK（Java Servlet Development Kit）や、JSWDK（JavaServer Web Development Kit）もありますが、Servlet APIのバージョンは古いです。  
+
+> ◆ サーブレットコンテナとは、Servlet APIモジュールとともに、ApacheなどのWebサーバをサーブレットを動作させるために拡張するためのモジュールで、サーブレットエンジンとも呼びます。
+　サーブレットコンテナには、Tomcat3+mod_dkや、Tomcat4+mod_webappや、JRunなどがあります。 mod_dkやmod_webappは、JServを汎用的にして、Apache以外のWebサーバにも対応したものです。  
+
+
 [https://codezine.jp/article/detail/1481](https://codezine.jp/article/detail/1481)
 
 [https://qiita.com/Kazunori-Kimura/items/a15a011485ac92074d6f](https://qiita.com/Kazunori-Kimura/items/a15a011485ac92074d6f)
