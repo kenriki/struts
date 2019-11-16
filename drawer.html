@@ -10,6 +10,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
         <!-- drawer.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+        <!-- 個別JS -->
+        <script src="./js/script.js"></script>
     </head>
     <body class="drawer drawer--left">
         <header role="banner">
@@ -30,30 +32,5 @@
             <!-- Page content -->
             <button type="button" class="drawer-toggle">Drawer toggle</button>
         </main>
-
-        <script>
-            $(document).ready(function() {
-                $('.drawer').drawer();
-
-                $('.drawer').drawer({
-                    class: {
-                        nav: 'drawer-nav',
-                        toggle: 'drawer-toggle',
-                        overlay: 'drawer-overlay',
-                        open: 'drawer-open',
-                        close: 'drawer-close',
-                        dropdown: 'drawer-dropdown'
-                    },
-                    iscroll: {
-                        // Configuring the iScroll
-                        // https://github.com/cubiq/iscroll#configuring-the-iscroll
-                        mouseWheel: true,
-                        preventDefault: false
-                    },
-                   showOverlay: true
-                });
-             });
-        </script>
-
     </body>
 </html>
