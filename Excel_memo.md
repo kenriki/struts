@@ -18,6 +18,7 @@ Sub Zoom100CursorA1()
 End Sub
 ```
 
+#【Excel VBA】メール作成マクロ
 ```vba
 Sub 日報メール作成()
 'レポート部分の生成
@@ -37,9 +38,9 @@ With Sheet1
     Dim mySubject As String: mySubject = .Range("B3").Value
     Dim myBody As String: myBody = ""
     myBody = myBody & .Range("B4").Value & "<br>" '宛名"
-    myBody = myBody & convertLf(.Range("B5").Value) & "<br>" '書き出し
+    myBody = myBody & Range("B5").Value & "<br>" '書き出し
     myBody = myBody & report 'レポート
-    myBody = myBody & convertLf(.Range("B6").Value) '締め
+    myBody = myBody & Range("B6").Value '締め
 End With
 '下書き作成
 Dim olApp As Outlook.Application
