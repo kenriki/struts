@@ -17,3 +17,42 @@ Sub Zoom100CursorA1()
    Sheets(1).Select
 End Sub
 ```
+
+```vba
+Sub 日報メール作成()
+'レポート部分の生成
+Dim report As String: report = ""
+Dim i As Long: i = 2
+With Sheet2
+    Do While .Cells(i, 1).Value <> ""
+        report = report & .Cells(i, 1).Value & "／"
+        report = report & .Cells(i, 2).Value & "／"
+        report = report & .Cells(i, 3).Value & "<br>"
+        i = i + 1
+    Loop
+End With
+'メールの各要素の生成
+With Sheet1
+    Dim myTo As String: myTo = .Range("B2").Value
+    Dim mySubject As String: mySubject = .Range("B3").Value
+    Dim myBody As String: myBody = ""
+    myBody = myBody & .Range("B4").Value & "<br>" '宛名"
+    myBody = myBody & convertLf(.Range("B5").Value) & "<br>" '書き出し
+    myBody = myBody & report 'レポート
+    myBody = myBody & convertLf(.Range("B6").Value) '締め
+End With
+'下書き作成
+Dim olApp As Outlook.Application
+Set olApp = New Outlook.Application
+Dim myMail As MailItem
+Set myMail = olApp.CreateItem(olMailItem)
+With myMail
+    .To = myTo
+    .Subject = mySubject
+    .Display
+    .HTMLBody = myBody & .HTMLBody
+End With
+End Sub
+
+```
+[参考](https://www.atmarkit.co.jp/ait/spv/1810/02/news004.html)
