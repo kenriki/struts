@@ -18,7 +18,7 @@ Sub Zoom100CursorA1()
 End Sub
 ```
 
-#【Excel VBA】メール作成マクロ
+# 【Excel VBA】メール作成マクロ
 ```vba
 Sub 日報メール作成()
 'レポート部分の生成
