@@ -1,0 +1,41 @@
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <title>Sample</title> <link href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/O2aKM2iSbOw.png" rel="shortcut icon" sizes="196x196" /> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css"> 
+
+<style>
+div {
+  margin: 20px 20px 20px 20px;
+}
+</style>
+</head>
+<body> 
+
+<div>
+ <label for="search">地域の名前: </label>
+ <input id="search" type="text"> 
+ <button>検索</button> 
+ <p></p>
+</div>
+
+<script> 
+
+const contacts = ['東京:2232322', '埼玉:3453456', '栃木:7654322', '神奈川:9998769', '千葉:9384975']; 
+
+const para = document.querySelector('p'); 
+const input = document.querySelector('input'); const btn = document.querySelector('button');
+
+btn.addEventListener('click', function() { 
+let searchName = input.value; 
+input.value = ''; 
+input.focus(); 
+
+for (let i = 0; i < contacts.length; i++) { 
+  let splitContact = contacts[i].split(':');          if (splitContact[0] === searchName)     { para.textContent = splitContact[0] + ' の地域は ' + splitContact[1] + ' です。'; break; } else { para.textContent = 'コードが見つかりません。'; } }
+
+ });
+
+</script>
+
+</body> 
+
+</html>
