@@ -4,9 +4,9 @@ Sub checkTaskDate()
     Dim rowNum As Integer
     rowNum = 2
     
-    '期限
+    '期限欄が空白なるまでループ
     Do Until Cells(rowNum, 5) = ""
-    
+        '今日日付よりも古い場合
         If Cells(rowNum, 5).Value < Format(Date, "yyyy/mm/dd") Then
             Cells(rowNum, 1).Interior.ColorIndex = 3
             Cells(rowNum, 2).Interior.ColorIndex = 3
@@ -49,7 +49,7 @@ Sub checkTaskDate()
             Cells(rowNum, 7).Value = "リスケ必要"
             Cells(rowNum, 7).Font.ColorIndex = 3
         End If
-        
+        '行数カウント
         rowNum = rowNum + 1
     Loop
     
