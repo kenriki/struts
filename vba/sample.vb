@@ -1,3 +1,4 @@
+'期限超過チェック
 Sub checkTaskDate()
     Worksheets("Sheet1").Activate
     Dim rowNum As Integer
@@ -55,7 +56,7 @@ Sub checkTaskDate()
     
 End Sub
 
-
+'タスク最新化
 Sub checkvalue()
 
     Worksheets("Sheet1").Activate
