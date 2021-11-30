@@ -57,3 +57,27 @@ End Sub
 
 ```
 [参考](https://www.atmarkit.co.jp/ait/spv/1810/02/news004.html)
+
+'データ転記の例
+```
+Sub Sample3()
+    '①データの最終行を取得
+    Dim maxRow As Long
+    maxRow = Cells(Rows.Count, 1).End(xlUp).Row
+    
+    '②データ範囲を一括で転記
+    Range("E3:G" & maxRow).Value = Range("A3:C" & maxRow).Value
+End Sub
+
+'別シートから転記の例
+Sub Sample4()
+    '①シートを変数にセット
+    Dim ws1 As Worksheet
+    Dim ws2 As Worksheet
+    Set ws1 = Worksheets("Sheet1")
+    Set ws2 = Worksheets("Sheet2")
+    
+    '②シートを指定してデータを転記
+    ws2.Range("A1:C4").Value = ws1.Range("A1:C4").Value
+End Sub
+```
