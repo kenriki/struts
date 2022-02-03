@@ -11,6 +11,7 @@ Sub Zoom100CursorA1()
        ActiveSheet.Range("A1").Select
        '# 倍率を「100%」にする
        ActiveWindow.Zoom = 100
+       ActiveWindow.DisplayGridlines=False
    '# 次のシートに対して処理する
    Next s
    '# 一番左のシートを選択する
