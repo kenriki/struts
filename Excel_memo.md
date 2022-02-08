@@ -15,10 +15,13 @@ Sub Zoom100CursorA1()
        ActiveWindow.DisplayGridlines=False
    '# 次のシートに対して処理する
    Next s
+
    '図形を最後までループする
     For i = 1 To ActiveSheet.Shapes.Count
         '図形を選択
         ActiveSheet.Shapes(i).Select Replace:=False
+        ActiveSheet.Shapes(i).Height = 300
+        ActiveSheet.Shapes(i).Width = 300
     Next
 
    '# 一番左のシートを選択する
