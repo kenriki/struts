@@ -17,11 +17,12 @@ Sub Zoom100CursorA1()
    Next s
 
    '図形を最後までループする
-    For i = 1 To ActiveSheet.Shapes.Count
+    Dim shp As Shape
+    For Each shp In ActiveSheet.Shapes
         '図形を選択
-        ActiveSheet.Shapes(i).Select Replace:=False
-        ActiveSheet.Shapes(i).Height = 300
-        ActiveSheet.Shapes(i).Width = 300
+        shp.Select Replace:=False
+        shp.LockAspectRatio = msoTrue
+        shp.Height= 300
     Next
 
    '# 一番左のシートを選択する
