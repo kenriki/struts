@@ -37,6 +37,46 @@ Sub Zoom100CursorA1()
 End Sub
 ```
 
+# 枠線をエクセルのショートカットで自動描画
+```vba
+Sub 図形の枠線書式を設定する()
+   On Error GoTo ERR
+   Count = Selection.ShapeRange.Count
+
+   Dim line_format As LineFormat
+
+   Set line_format = Selection.ShapeRange.Line
+
+   '複数選択
+   If (Count > 1) Then
+      With line_format
+        .ForeColor.RGB = RGB(29,29,29)
+        .Weight=1
+        .Style = msoLineSingle
+        .DashStyle = msoLineSolid
+      End With
+   End If
+
+   '1つ選択
+   If (Count =1) Then
+      With line_format
+        .ForeColor.RGB = RGB(29,29,29)
+        .Weight=1
+        .Style = msoLineSingle
+        .DashStyle = msoLineSolid
+      End With
+   End If
+
+
+Exit Sub
+
+ERR:
+     MsgBox  "オートシェイプが選択されていません"
+
+End Sub
+
+```
+
 # 【Excel VBA】メール作成マクロ
 ```vba
 Sub 日報メール作成()
