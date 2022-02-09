@@ -42,7 +42,7 @@ End Sub
 Sub 図形の枠線書式を設定する()
    On Error GoTo ERR
    Dim Count
-   Count = Selection.ShapeRange.Count
+   Count = ActiveSheet.Shapes.Count
 
    Dim line_format As LineFormat
 
