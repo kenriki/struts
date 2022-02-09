@@ -60,7 +60,7 @@ Sub 図形の枠線書式を設定する()
    '1つ選択
    If (Count =1) Then
       With line_format
-        .ForeColor.RGB = RGB(29,29,29)
+        .ForeColor.RGB = RGB(255,0,0)
         .Weight=1
         .Style = msoLineSingle
         .DashStyle = msoLineSolid
