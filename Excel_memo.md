@@ -4,6 +4,13 @@
 Sub Zoom100CursorA1()
    '#「s」という変数を「オブジェクト型」で定義
    Dim s As Object
+   
+   'フォントの統一
+   With  s.Cells.Font
+       .Name="MSゴシック"
+       .Size=10
+   End With
+
    '# 現在開いているブックのすべてのシートに対して順番に処理
    For Each s In ActiveWorkbook.Sheets
        s.Activate
