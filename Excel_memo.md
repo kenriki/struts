@@ -142,3 +142,117 @@ Sub Sample4()
     ws2.Range("A1:C4").Value = ws1.Range("A1:C4").Value
 End Sub
 ```
+
+# Excelマクロ・VBA 2つの文字列を比較し、違う個所の文字色を赤に変更する方法
+```vba
+Option Explicit
+
+Sub StrDifEmphasis()
+    Const Str1StartSetCell As String = "A2"   ' 文字列1の開始セルの設定セルを指定
+    Const TargetCountSetCell As String = "B2" ' 対象行数の設定セルを指定
+    
+    Dim Str1StartCell As String '文字列1の開始セル
+    Dim targetCount As Integer  '対象行数
+    
+    Str1StartCell = ActiveSheet.Range(Str1StartSetCell).Value '文字列1の開始セルを取得
+    targetCount = ActiveSheet.Range(TargetCountSetCell).Value '対象行数を取得
+    
+    Dim rowCount As Integer ' 行数のカウンター
+    
+    ' 対象行走査ループ。文字列1の開始セルから終了セル（対象行数分下）までループ
+    For rowCount = 1 To targetCount
+        
+        ' 頻繁に使用する箇所を変数化(コードを短く且つ冗長性を排除するため)
+        Dim str1cell As Range ' 文字列1セル
+        Dim str2cell As Range ' 文字列2セル
+        Dim resultCell As Range ' 結果セル
+
+        Dim str1 As String ' 文字列1の値
+        Dim str2 As String ' 文字列2の値
+        
+        'セルを取得
+        Set str1cell = ActiveSheet.Range(Str1StartCell).Offset(rowCount - 1, 0)
+        Set str2cell = ActiveSheet.Range(Str1StartCell).Offset(rowCount - 1, 1)
+        Set resultCell = ActiveSheet.Range(Str1StartCell).Offset(rowCount - 1, 2)
+        
+        '文字列1と2の値を取得
+        str1 = str1cell.Value
+        str2 = str2cell.Value
+
+        'セルの状態を初期化。文字列セルを黒文字に、結果を空白にする
+        resultCell.Value = ""
+        str1cell.Font.Color = vbBlack
+        str2cell.Font.Color = vbBlack
+
+        ' 2つの文字列が異なる場合にのみ処理を行う
+        If str1 <> str2 Then
+            
+            ' 結果セルにメッセージを設定
+            resultCell.Value = "異なる文字列です"
+            
+            Dim maxLen As Integer ' 2つの文字列の長い方の文字数
+            
+            ' 2つの文字列の長い方の文字数を設定
+            If Len(str1) > Len(str2) Then
+                ' 文字列1の方が長いため、文字列1の文字数を設定
+                maxLen = Len(str1)
+            Else
+                ' 文字列2の方が長いため、文字列1の文字数を設定
+                ' (文字数が同じ場合もこの処理。str1で行っても同じ)
+                maxLen = Len(str2)
+            End If
+            
+            Dim charCount As Integer ' 比較用文字数カウンター
+            
+            ' 文字比較ループ。大きいほうの文字列の文字数だけループ
+            For charCount = 1 To maxLen
+                Dim char1 As String ' 文字列1から抽出した1文字
+                Dim char2 As String ' 文字列2から抽出した1文字
+                
+                Dim isChar1Under As Boolean ' 文字列1の文字数内か否か
+                Dim isChar2Under As Boolean ' 文字列2の文字数内か否か
+                
+                '文字列1から1文字抽出
+                If charCount <= Len(str1) Then
+                    'charCountが文字数内に収まっているため1文字抽出
+                    char1 = Mid(str1, charCount, 1)
+                    isChar1Under = True
+                Else
+                    '文字数内に収まっていないため空白文字とする
+                    char1 = ""
+                    isChar1Under = False
+                End If
+                
+                '文字列2から1文字抽出
+                If charCount <= Len(str2) Then
+                    'charCountが文字数内に収まっているため1文字抽出
+                    char2 = Mid(str2, charCount, 1)
+                    isChar2Under = True
+                Else
+                    '文字数内に収まっていないため空白文字とする
+                    char2 = ""
+                    isChar2Under = False
+                End If
+                
+                ' 相違している文字を赤色に変更
+                If char1 <> char2 Then
+                    If isChar1Under Then
+                        str1cell.Characters(Start:=charCount, Length:=1).Font.Color = vbRed
+                    End If
+                    
+                    If isChar2Under Then
+                        str2cell.Characters(Start:=charCount, Length:=1).Font.Color = vbRed
+                    End If
+                End If
+                
+            Next
+            
+        End If
+        
+    Next
+    
+    MsgBox ("終了")
+    
+End Sub
+
+```
